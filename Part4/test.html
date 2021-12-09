@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with DOM</title>
+</head>
+
+<body>
+    <a href="https://www/yahoo.com">Yahoo</a>
+    <div id="container">
+        We are just moving ahead
+    </div>
+    <a href="https://www.google.com">Search on Google</a>
+    <!-- <button id="submitButton" onclick = "createNewPara();">SUBMIT</button> -->
+    <button id="submitButton" onclick="changeStyleOfDiv();">SUBMIT</button>
+
+    <form action="#">
+
+    </form>
+
+    <form action=""></form>
+
+    <script>
+        console.log(document.lastModified);
+
+        // Lets add an event to the button from JS
+        //  document.getElementById('submitButton').addEventListener('click', () => alert("Click functionality added from JS..."));
+        // document.getElementById('submitButton').addEventListener('mouseout', () => alert("Click functionality added from JS..."));
+
+
+        // Display the body content in a division
+        // document.getElementById('container').innerHTML = document.body.innerHTML;
+        // alert(document.body.innerHTML);
+
+        // Display the number of links on this page:
+        console.log("Number of links : " + document.links.length);
+
+        // Display the count of forms
+        console.log("Number of forms on this page : " + document.forms.length);
+
+        //Display the page title
+        console.log("Page Title : " + document.title);
+
+        // Create a new button dynamically
+        let myButton = document.createElement("BUTTON");
+        myButton.innerHTML = "I was Created from JS";
+        document.body.appendChild(myButton);
+
+
+        function createNewPara() {
+            // Create a new paragraph inside div#container
+            let myNewPara = document.createElement("P");
+            myNewPara.id = "paraWithinContainer";
+            myNewPara.innerHTML = "We created this paragraph from JS!";
+            document.getElementById('container').appendChild(myNewPara);
+        }
+
+        function changeStyleOfDiv() {
+            document.getElementById('container').style.fontSize = "34px";
+            document.getElementById('container').style.backgroundColor = "orange";
+            document.getElementById('container').style.color = "white";
+        }
+
+    </script>
+</body>
+
+</html>

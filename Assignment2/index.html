@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="response.html" onsubmit="return validateFormFields();">
+            <input id="username" type="text" placeholder="username"><br>
+            <input id="email" type="text" placeholder="email"><br>
+            <input id="password" type="text" placeholder="password"><br>
+            <input id="gender" type="radio" name="gender" value="male"> Male
+            <input id="gender" type="radio" name="gender" value="female"> Female
+            <input id="gender" type="radio" name="gender" value="other"> PreferNotToSay<br>
+            <label for="education">Education:</label>
+            <select id="education" name="education">
+                <option value="bachelors">Bachelors</option>
+                <option value="masters">Masters</option>
+                <option value='' selected>Select your qualification</option>
+            </select><br>
+            <label for="courses">Choose course you want to enroll in:</label>
+            <select id="courses" name="courses">
+                <option value="volvo">Full-Stack</option>
+                <option value="saab">Quality-Automation</option>
+                <option value="fiat">Dev-ops</option>
+                <option value='' selected>Select your course:</option>
+            </select><br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+</body>
+
+</html>
